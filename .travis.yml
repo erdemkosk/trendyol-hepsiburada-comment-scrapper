@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+ - "14.15.0"
+script:
+ - echo '___Build Started____'
+ - echo '___Installing Dependencies____'
+ - npm install 
+ - echo '___Running tests____' 
+ - npm run test 
