@@ -6,8 +6,6 @@ const config = require('./config');
 const logger = require('./api/plugin/logger');
 const healthService = require('./api/server/services/health');
 
-require('./api/plugin/mongodb');
-
 if (config.server.clusterEnabled && cluster.isMaster) {
   const cpuCount = os.cpus().length;
 

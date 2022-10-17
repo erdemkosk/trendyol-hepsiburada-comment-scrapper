@@ -4,7 +4,6 @@ const cors = require('cors');
 const helmet = require('helmet');
 
 const expressWinston = require('express-winston');
-const mongoSanitize = require('express-mongo-sanitize');
 const limit = require('express-better-ratelimit');
 const logger = require('./logger');
 
@@ -62,6 +61,4 @@ module.exports = function (app) {
     duration: 30000, // 30 seconds
     max: 30,
   }));
-
-  app.use(mongoSanitize());
 };
